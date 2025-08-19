@@ -3,126 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Brenda Palomino Sánchez - Psicología Clínica</title>
+    <title>Centro de Psicología Integral</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;700&display=swap');
+        
         body {
-            font-family: 'Montserrat', sans-serif;
-            scroll-behavior: smooth;
+            font-family: 'Raleway', sans-serif;
+            color: #333;
         }
-        .title-font {
+        
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
-        .bg-teal-50 {
-            background-color: #f0fdfa;
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
         }
-        .text-teal-600 {
-            color: #0d9488;
+        
+        .specialty-card {
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
         }
-        .border-teal-200 {
-            border-color: #99f6e4;
+        
+        .specialty-card:hover {
+            transform: translateY(-5px);
+            border-top-color: #0097a7;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        
+        .toggle-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
         }
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Header y navegación -->
-    <header class="fixed w-full bg-white shadow-sm z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-teal-600 title-font">Dra. Brenda Palomino Sánchez</div>
-                <nav class="hidden md:block">
-                    <ul class="flex space-x-8">
-                        <li><a href="#inicio" class="text-gray-700 hover:text-teal-600 transition">Inicio</a></li>
-                        <li><a href="#sobre-mi" class="text-gray-700 hover:text-teal-600 transition">Sobre mí</a></li>
-                        <li><a href="#servicios" class="text-gray-700 hover:text-teal-600 transition">Servicios</a></li>
-                        <li><a href="#contacto" class="text-gray-700 hover:text-teal-600 transition">Contacto</a></li>
-                    </ul>
-                </nav>
-                <button class="md:hidden text-teal-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 px-4 md:px-0">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Centro de Psicología Integral</h1>
+                <h2 class="text-2xl md:text-3xl text-gray-700 mb-6">Dra. Brenda Palomino Sánchez & Dra. Fiorella</h2>
+                <p class="text-lg text-gray-600 mb-8">Terapia psicológica especializada para ayudarte a encontrar equilibrio y bienestar emocional.</p>
+                <button class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+                    Agendar cita
                 </button>
             </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="inicio" class="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-r from-teal-50 to-blue-50">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-12 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6 title-font">Cuidando tu bienestar emocional</h1>
-                <p class="text-lg text-gray-600 mb-8">Terapia psicológica personalizada para ayudarte a encontrar balance y armonía en tu vida.</p>
-                <div class="flex space-x-4">
-                    <a href="#contacto" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md transition duration-300">Reservar cita</a>
-                    <a href="#servicios" class="border border-teal-600 text-teal-600 hover:bg-teal-50 px-6 py-3 rounded-md transition duration-300">Ver servicios</a>
-                </div>
-            </div>
-            <div class="md:w-1/2">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5d965876-f6b5-4154-8062-8a5f8271900f.png" alt="Psicóloga profesional sentada en su consultorio con libros y plantas, sonriendo cálidamente" class="rounded-lg shadow-xl">
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre mí -->
-    <section id="sobre-mi" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 title-font">Sobre mí</h2>
-                <div class="w-20 h-1 bg-teal-600 mx-auto"></div>
-            </div>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
-                    <img src="img/fotoPerfil.jpg" alt="Retrato profesional de la Dra. Laura Méndez, psicóloga con expresión cálida y profesional" class="rounded-lg shadow-md">
-                </div>
-                <div class="md:w-2/3 md:pl-12">
-                    <p class="text-lg text-gray-600 mb-6">Soy la Dra. Brenda Palomino Sánchez, psicóloga clínica con más de 12 años de experiencia ayudando a personas a superar desafíos emocionales y desarrollar herramientas para una vida más plena.</p>
-                    <p class="text-lg text-gray-600 mb-6">Mi enfoque integra terapia cognitivo-conductual con elementos de mindfulness y psicología positiva, adaptándome a las necesidades específicas de cada paciente.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                        <div class="flex items-start">
-                            <div class="bg-teal-50 p-3 rounded-full mr-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-gray-800 mb-1">Licenciatura en Psicología</h3>
-                                <p class="text-gray-600">Universidad Ricardo Palma</p>
-                            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="relative overflow-hidden rounded-lg shadow-xl h-64 w-48">
+                        <img src="https://placehold.co/400x600" alt="Retrato profesional de la Dra. Laura Mendez, psicóloga con cabello castaño recogido, usando blazer azul claro y sonriendo cálidamente" class="h-full w-full object-cover">
+                        <div class="absolute bottom-0 bg-black bg-opacity-50 text-white w-full p-3">
+                            <h3 class="font-bold">Dra. Brenda Palomino Sánchez</h3>
+                            <p class="text-sm">Psicóloga Clínica</p>
                         </div>
-                        <div class="flex items-start">
-                            <div class="bg-teal-50 p-3 rounded-full mr-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-gray-800 mb-1">Máster en Psicoterapia</h3>
-                                <p class="text-gray-600">Universidad X</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-teal-50 p-3 rounded-full mr-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-gray-800 mb-1">Colegiada</h3>
-                                <p class="text-gray-600">Nº M-12345</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-teal-50 p-3 rounded-full mr-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-gray-800 mb-1">Ponente</h3>
-                                <p class="text-gray-600">Charlas X</p>
-                            </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-lg shadow-xl h-64 w-48">
+                        <img src="https://placehold.co/400x600" alt="Retrato profesional de la Dra. Sofía Ramírez, psicóloga morena con lentes, vestida profesionalmente con blusa blanca y sonrisa amigable" class="h-full w-full object-cover">
+                        <div class="absolute bottom-0 bg-black bg-opacity-50 text-white w-full p-3">
+                            <h3 class="font-bold">Dra. Fiorella</h3>
+                            <p class="text-sm">Psicóloga Clínica</p>
                         </div>
                     </div>
                 </div>
@@ -130,297 +77,424 @@
         </div>
     </section>
 
-    <!-- Servicios -->
-    <section id="servicios" class="py-20 bg-teal-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 title-font">Mis servicios</h2>
-                <div class="w-20 h-1 bg-teal-600 mx-auto"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Ofrezco terapia individual adaptada a tus necesidades personales y momentos vitales.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                    <div class="bg-teal-50 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Terapia individual adultos</h3>
-                    <p class="text-gray-600 mb-6">Sesiones personalizadas para afrontar ansiedad, depresión, estrés, duelo y otros desafíos emocionales.</p>
-                    <div class="font-medium text-teal-600">60 min | S/.80</div>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                    <div class="bg-teal-50 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Terapia de pareja</h3>
-                    <p class="text-gray-600 mb-6">Espacio para mejorar la comunicación, resolver conflictos y fortalecer el vínculo afectivo.</p>
-                    <div class="font-medium text-teal-600">90 min | S/.120</div>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                    <div class="bg-teal-50 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <!-- About Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nuestro Enfoque Terapéutico</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="flex items-start">
+                    <div class="bg-teal-100 p-3 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Terapia online</h3>
-                    <p class="text-gray-600 mb-6">Sesiones por videollamada con la misma profesionalidad y confidencialidad que la terapia presencial.</p>
-                    <div class="font-medium text-teal-600">60 min | S/.70</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- Testimonios (versión limpia) -->
-<section class="py-20 bg-white">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold text-gray-800 mb-4 title-font">Testimonios</h2>
-      <div class="w-20 h-1 bg-teal-600 mx-auto"></div>
-      <p class="text-gray-600 max-w-2xl mx-auto mt-4">Lo que dicen mis pacientes sobre su experiencia en terapia.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- Card 1 -->
-      <div class="bg-teal-50 p-8 rounded-lg">
-        <div class="flex items-center mb-4">
-          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/883a2594-b8c2-4f6a-b683-1b0b66718d4a.png"
-               alt="Retrato de mujer de 35 años con expresión feliz"
-               class="rounded-full h-12 w-12 mr-4">
-          <div>
-            <h4 class="font-semibold text-gray-800">Ana S.</h4>
-            <div class="flex text-yellow-400">
-              <!-- 5 estrellas idénticas, seguras -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-600">"La terapia con la Dra. Palomino Sánchez transformó mi manera de manejar el estrés laboral. Sus herramientas son prácticas y fáciles de incorporar en el día a día."</p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-teal-50 p-8 rounded-lg">
-        <div class="flex items-center mb-4">
-          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8a4bce99-8f93-47d7-9284-9fe545502956.png"
-               alt="Retrato de hombre de 40 años sonriendo"
-               class="rounded-full h-12 w-12 mr-4">
-          <div>
-            <h4 class="font-semibold text-gray-800">Carlos P.</h4>
-            <div class="flex text-yellow-400">
-              <!-- 5 estrellas -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-600">"Tras años evitando ayuda, acudir a la Dra. Palomino Sánchez fue lo mejor. Su aproximación directa pero empática me ayudó a entender y manejar mi ansiedad."</p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-teal-50 p-8 rounded-lg">
-        <div class="flex items-center mb-4">
-          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/63b5041b-e0c0-4056-83b2-825823825ec4.png"
-               alt="Retrato de pareja feliz abrazándose"
-               class="rounded-full h-12 w-12 mr-4">
-          <div>
-            <h4 class="font-semibold text-gray-800">Marta y Javier</h4>
-            <div class="flex text-yellow-400">
-              <!-- 5 estrellas -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-600">"Estábamos al borde de la separación cuando decidimos acudir a terapia de pareja. Gracias a la Dra. Palomino Sánchez aprendimos a comunicarnos de manera eficiente."</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 title-font">Contacto</h2>
-                <div class="w-20 h-1 bg-teal-600 mx-auto"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Puedes contactarme para una primera consulta gratuita de 15 minutos donde valoraremos juntos tu situación.</p>
-            </div>
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
-                    <div class="bg-white p-8 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Información de contacto</h3>
-                        <div class="mb-6">
-                            <div class="flex items-start mb-4">
-                                <div class="bg-teal-50 p-3 rounded-full mr-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Consultorio</h4>
-                                    <p class="text-gray-600">Calle Psicología, 23, 1ºA<br>28015 Peru</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start mb-4">
-                                <div class="bg-teal-50 p-3 rounded-full mr-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Email</h4>
-                                    <p class="text-gray-600">b.palominosanchez@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-teal-50 p-3 rounded-full mr-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Teléfono</h4>
-                                    <p class="text-gray-600">+34 912 345 678</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-t border-gray-200 pt-6">
-                            <h4 class="font-medium text-gray-800 mb-4">Horario de atención</h4>
-                            <div class="grid grid-cols-2 gap-4 text-gray-600">
-                                <div>Lunes - Viernes</div>
-                                <div class="font-medium">9:00 - 20:00</div>
-                                <div>Sábados</div>
-                                <div class="font-medium">10:00 - 14:00</div>
-                                <div>Domingos</div>
-                                <div class="font-medium">Cerrado</div>
-                            </div>
-                        </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Terapia Individual</h3>
+                        <p class="text-gray-600">Sesiones personalizadas adaptadas a tus necesidades específicas, trabajando en un entorno seguro y confidencial.</p>
                     </div>
                 </div>
-                <div class="md:w-1/2">
-                    <div class="bg-white p-8 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Solicita tu primera consulta</h3>
-                        <form id="contactForm" class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre completo</label>
-                                    <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500">
-                                </div>
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500">
-                                </div>
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
-                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500">
-                            </div>
-                            <div>
-                                <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Tipo de consulta</label>
-                                <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500">
-                                    <option value="individual">Terapia individual</option>
-                                    <option value="pareja">Terapia de pareja</option>
-                                    <option value="online">Terapia online</option>
-                                    <option value="otra">Otra consulta</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
-                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500"></textarea>
-                            </div>
-                            <div class="pt-2">
-                                <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md transition duration-300">Enviar mensaje</button>
-                            </div>
-                        </form>
+                
+                <div class="flex items-start">
+                    <div class="bg-teal-100 p-3 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Terapia de Pareja</h3>
+                        <p class="text-gray-600">Espacio para mejorar la comunicación, resolver conflictos y fortalecer los vínculos afectivos.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="bg-teal-100 p-3 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Terapia Online</h3>
+                        <p class="text-gray-600">Sesiones virtuales para tu comodidad, manteniendo la misma calidad y profesionalismo que nuestras consultas presenciales.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="bg-teal-100 p-3 rounded-full mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Talleres Grupales</h3>
+                        <p class="text-gray-600">Programas especializados para el manejo de emociones, estrés y desarrollo personal en entornos grupales.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md overflow-hidden mt-12">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Dra. Brenda Palomino Sánchez</h3>
+                        <p class="text-gray-600 mb-4">Licenciada en Psicología con especialización en Terapia Cognitivo-Conductual y Mindfulness. Más de 10 años de experiencia clínica.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                Especialista en trastornos de ansiedad
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                Terapia de tercera generación
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                Mindfulness y regulación emocional
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-50 p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Dra. Fiorella</h3>
+                        <p class="text-gray-600 mb-4">Psicóloga con maestría en Terapia Familiar y Sistémica. Experta en dinámicas relacionales y terapia breve.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                Terapia de pareja y familiar
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                Intervención en crisis
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                Desarrollo personal y autoestima
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-12">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col md:flex-row justify-between">
-      <div class="mb-8 md:mb-0">
-        <div class="text-2xl font-bold text-white mb-4 title-font">Dra. Brenda Palomino Sánchez</div>
-        <p class="text-gray-300 max-w-xs">Psicología clínica especializada en terapia cognitivo-conductual y mindfulness.</p>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Enlaces</h3>
-          <ul class="space-y-2">
-            <li><a href="#inicio" class="text-gray-300 hover:text-white transition">Inicio</a></li>
-            <li><a href="#sobre-mi" class="text-gray-300 hover:text-white transition">Sobre mí</a></li>
-            <li><a href="#servicios" class="text-gray-300 hover:text-white transition">Servicios</a></li>
-            <li><a href="#contacto" class="text-gray-300 hover:text-white transition">Contacto</a></li>
-          </ul>
+    <!-- Specialties Section -->
+    <section class="py-16 bg-gray-100 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Áreas de Especialización</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="specialty-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="text-teal-600 text-4xl mb-4">01</div>
+                    <h3 class="text-xl font-bold mb-3">Ansiedad y Estrés</h3>
+                    <p class="text-gray-600 mb-4">Técnicas efectivas para manejar preocupaciones, ataques de pánico y estrés crónico.</p>
+                    <button class="text-teal-600 font-semibold text-sm flex items-center toggle-btn">
+                        Más información
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="toggle-content mt-3">
+                        <p class="text-gray-500 text-sm">Utilizamos estrategias cognitivo-conductuales combinadas con mindfulness para ayudarte a recuperar el control sobre tus emociones y pensamientos.</p>
+                    </div>
+                </div>
+                
+                <div class="specialty-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="text-teal-600 text-4xl mb-4">02</div>
+                    <h3 class="text-xl font-bold mb-3">Depresión</h3>
+                    <p class="text-gray-600 mb-4">Terapia integral para superar los estados depresivos y recuperar la motivación.</p>
+                    <button class="text-teal-600 font-semibold text-sm flex items-center toggle-btn">
+                        Más información
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="toggle-content mt-3">
+                        <p class="text-gray-500 text-sm">Abordamos tanto los síntomas como las causas profundas, trabajando en la reconstrucción de esquemas emocionales saludables.</p>
+                    </div>
+                </div>
+                
+                <div class="specialty-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="text-teal-600 text-4xl mb-4">03</div>
+                    <h3 class="text-xl font-bold mb-3">Relaciones de Pareja</h3>
+                    <p class="text-gray-600 mb-4">Mejora comunicación, resolución de conflictos y reconstrucción de la intimidad.</p>
+                    <button class="text-teal-600 font-semibold text-sm flex items-center toggle-btn">
+                        Más información
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="toggle-content mt-3">
+                        <p class="text-gray-500 text-sm">Enfoque sistémico para identificar patrones disfuncionales y crear nuevas dinámicas relacionales saludables.</p>
+                    </div>
+                </div>
+                
+                <div class="specialty-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="text-teal-600 text-4xl mb-4">04</div>
+                    <h3 class="text-xl font-bold mb-3">Autoestima y Desarrollo Personal</h3>
+                    <p class="text-gray-600 mb-4">Fortalece tu autoconcepto y construye una relación sana contigo mismo.</p>
+                    <button class="text-teal-600 font-semibold text-sm flex items-center toggle-btn">
+                        Más información
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="toggle-content mt-3">
+                        <p class="text-gray-500 text-sm">Programas personalizados para trabajar autoconocimiento, autocuidado y establecimiento de límites saludables.</p>
+                    </div>
+                </div>
+                
+                <div class="specialty-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="text-teal-600 text-4xl mb-4">05</div>
+                    <h3 class="text-xl font-bold mb-3">Mindfulness y Gestión Emocional</h3>
+                    <p class="text-gray-600 mb-4">Aprende a regular tus emociones y vivir con mayor plenitud.</p>
+                    <button class="text-teal-600 font-semibold text-sm flex items-center toggle-btn">
+                        Más información
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="toggle-content mt-3">
+                        <p class="text-gray-500 text-sm">Incorporando técnicas basadas en la atención plena para aumentar tu conciencia y reducir la reactividad emocional.</p>
+                    </div>
+                </div>
+                
+                <div class="specialty-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="text-teal-600 text-4xl mb-4">06</div>
+                    <h3 class="text-xl font-bold mb-3">Duelos y Pérdidas</h3>
+                    <p class="text-gray-600 mb-4">Proceso acompañado para superar pérdidas y transiciones difíciles.</p>
+                    <button class="text-teal-600 font-semibold text-sm flex items-center toggle-btn">
+                        Más información
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="toggle-content mt-3">
+                        <p class="text-gray-500 text-sm">Espacio seguro para elaborar el dolor y encontrar significado en las experiencias difíciles.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Legal</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-300 hover:text-white transition">Aviso legal</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition">Política de privacidad</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition">Cookies</a></li>
-          </ul>
+    <!-- Testimonials Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Lo que dicen nuestros pacientes</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="testimonial-card rounded-lg p-6 shadow-lg border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://placehold.co/100x100" alt="Mujer joven sonriente llamativamente feliz con cabello rubio recogido" class="h-full w-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana R.</h4>
+                            <p class="text-teal-600 text-sm">Paciente de la Dra. Palomino Sanchez</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"La Dra. Palomino Sánchez me ayudó a superar mi ansiedad con herramientas que nunca imaginé. Su enfoque es cálido pero muy profesional. En solo 3 meses noté cambios significativos en mi vida diaria."</p>
+                </div>
+                
+                <div class="testimonial-card rounded-lg p-6 shadow-lg border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://placehold.co/100x100" alt="Hombre maduro con cabello gris y sonrisa cálida, vestido formalmente" class="h-full w-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Carlos T.</h4>
+                            <p class="text-teal-600 text-sm">Paciente de la Dra. Fiorella</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Después de varios terapeutas, encontré en la Dra. Ramírez a alguien que realmente entendía mis problemas maritales. Su enfoque directo pero empático fue exactamente lo que necesitábamos mi esposa y yo."</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="testimonial-card rounded-lg p-6 shadow-lg border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://placehold.co/100x100" alt="Mujer morena joven con cabello rizado y expresión pensativa pero positiva" class="h-full w-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">María G.</h4>
+                            <p class="text-teal-600 text-sm">Paciente de ambas profesionales</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"El trabajo conjunto de ambas doctoras fue fundamental en mi recuperación. La combinación de sus enfoques me dio una perspectiva completa y estrategias diversas para manejar mi depresión."</p>
+                </div>
+                
+                <div class="testimonial-card rounded-lg p-6 shadow-lg border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://placehold.co/100x100" alt="Joven estudiante con gafas y expresión inteligente, vestido casual pero formal" class="h-full w-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Luis F.</h4>
+                            <p class="text-teal-600 text-sm">Paciente de la Dra. Mendez</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Las técnicas de mindfulness que aprendí con la Dra. Mendez transformaron mi manera de enfrentar el estrés universitario. Ahora puedo mantener la calma incluso en períodos de exámenes."</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Redes sociales</h3>
-          <div class="flex space-x-4">
-            <!-- Icono simple 1 -->
-            <a href="https://www.facebook.com/Brizraelita" target="_blank" class="bg-gray-700 hover:bg-gray-600 p-2 rounded-full transition" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                <path d="M10 2a8 8 0 100 16 8 8 0 000-16Zm1.5 4h1.75v2H11.5V15h-2.5V8H8V6h1V5.5A2.5 2.5 0 0111.5 3h1.75v2H11.5c-.276 0-.5.224-.5.5V6Z"/>
-              </svg>
-            </a>
-            <!-- Icono simple 2 -->
-            <a href="https://www.instagram.com/brizraelita?utm_source=ig_web_button_share_sheet&igsh=MWNjYTA2YTBibHZ1ZA==" target="_blank" class="bg-gray-700 hover:bg-gray-600 p-2 rounded-full transition" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                <path d="M6 3h8a3 3 0 013 3v8a3 3 0 01-3 3H6a3 3 0 01-3-3V6a3 3 0 013-3Zm4 3a4 4 0 100 8 4 4 0 000-8Zm5-.75a.75.75 0 10-1.5 0 .75.75 0 001.5 0Z"/>
-              </svg>
-            </a>
-          </div>
+    <!-- Contact Section -->
+    <section class="py-16 bg-teal-700 text-white px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Agenda tu cita hoy mismo</h2>
+                <p class="max-w-2xl mx-auto">Da el primer paso hacia tu bienestar emocional. Nuestro equipo estará encantado de ayudarte.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white text-gray-800 rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        Contacto
+                    </h3>
+                    <p class="mb-2">Teléfono: +123 456 7890</p>
+                    <p>WhatsApp: +123 456 7890</p>
+                </div>
+                
+                <div class="bg-white text-gray-800 rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        Ubicación
+                    </h3>
+                    <p>Calle Psicología 123, Consultorio 45</p>
+                    <p>Ciudad Psique, CP 54321</p>
+                </div>
+                
+                <div class="bg-white text-gray-800 rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        Horario
+                    </h3>
+                    <p class="mb-2">Lunes a Viernes: 9:00 - 19:00</p>
+                    <p>Sábados: 9:00 - 14:00</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 max-w-2xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                <form class="p-6">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="name">Nombre completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="email">Correo electrónico</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="phone">Teléfono</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="doctor">Doctora preferida</label>
+                            <select id="doctor" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500">
+                                <option value="">Cualquiera de las dos</option>
+                                <option value="Dra. Laura Mendez">Dra. Laura Mendez</option>
+                                <option value="Dra. Sofía Ramírez">Dra. Sofía Ramírez</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2" for="message">Mensaje</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Enviar solicitud
+                    </button>
+                </form>
+            </div>
         </div>
-      </div>
-    </div>
+    </section>
 
-    <div class="mt-10 text-center text-gray-400 text-sm">
-      © <span id="year"></span> Dra. Brenda Palomino Sánchez. Todos los derechos reservados.
-    </div>
-  </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Centro de Psicología Integral</h3>
+                    <p class="text-gray-400">Terapia profesional para tu bienestar emocional y desarrollo personal.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Inicio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Servicios</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Nuestras doctoras</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terapia individual</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terapia de pareja</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Talleres grupales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terapia online</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <p class="text-gray-400 mb-2">consultas@psicologiaintegral.com</p>
+                    <p class="text-gray-400 mb-4">+123 456 7890</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Centro de Psicología Integral. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</footer>
-
+    <script>
+        // Toggle functionality for specialty cards
+        document.querySelectorAll('.toggle-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    button.innerHTML = 'Más información <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    button.innerHTML = 'Mostrar menos <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
