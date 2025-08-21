@@ -193,12 +193,12 @@
                 
                 <div class="form-group">
                     <label class="required-field">Documento de Identidad</label>
-                    <input type="text" name="documento" required placeholder="DNI, Pasaporte, etc." class="text-black">
+                    <input type="number" pattern="[0-9]{9}" maxlength="8" inputmode="numeric" name="documento" required placeholder="DNI, Pasaporte, etc." class="text-black">
                 </div>
                 
                 <div class="form-group">
                     <label>Teléfono de contacto</label>
-                    <input type="tel" name="phone" class="text-black">
+                    <input type="text" oninput="this.value = this.value .replace(/[^0-9]/g, '') .substring(0,9) .replace(/(\d{3})(?=\d)/g, '$1 ') .trim();" maxlength="11" inputmode="numeric" name="phone" class="text-black">
                 </div>
                 
                 <div class="form-group">
