@@ -173,10 +173,10 @@
             <h2>Formulario de Reclamación</h2>
             <p>Por favor complete el siguiente formulario para registrar su reclamación. Todos los campos marcados con * son obligatorios.</p>
             
-            <form action="#" method="post">
+            <form action="https://formspree.io/f/xkgzlevn" id="contactForm" method="post">
                 <div class="form-group">
                     <label class="required-field">Tipo de Reclamación</label>
-                    <select name="complaint_type" class="complaint_type" required>
+                    <select name="tipoReclamacion" class="complaint_type" required>
                         <option value="" selected disabled>Seleccione una opción</option>
                         <option value="service" >Calidad del servicio</option>
                         <option value="attention" >Atención recibida</option>
@@ -188,12 +188,12 @@
                 
                 <div class="form-group">
                     <label class="required-field">Nombre completo</label>
-                    <input type="text" name="full_name" required>
+                    <input type="text" name="name" required>
                 </div>
                 
                 <div class="form-group">
                     <label class="required-field">Documento de Identidad</label>
-                    <input type="text" name="document" required placeholder="DNI, Pasaporte, etc.">
+                    <input type="text" name="documento" required placeholder="DNI, Pasaporte, etc.">
                 </div>
                 
                 <div class="form-group">
@@ -208,28 +208,67 @@
                 
                 <div class="form-group">
                     <label class="required-field">Fecha del hecho</label>
-                    <input type="date" name="incident_date" required>
+                    <input type="date" name="date" required>
                 </div>
                 
                 <div class="form-group">
                     <label class="required-field">Detalle de la reclamación</label>
-                    <textarea name="complaint_details" required placeholder="Describa con detalle su reclamación, incluyendo todas las circunstancias relevantes..."></textarea>
+                    <textarea name="details" required placeholder="Describa con detalle su reclamación, incluyendo todas las circunstancias relevantes..."></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label class="required-field">¿Qué solución propone?</label>
-                    <textarea name="proposed_solution" required placeholder="Si tiene alguna sugerencia para resolver su reclamación, indíquela aquí..."></textarea>
+                    <textarea name="solution" required placeholder="Si tiene alguna sugerencia para resolver su reclamación, indíquela aquí..."></textarea>
                 </div>
                 
                 <div class="confirmation-checkbox">
-                    <input type="checkbox" id="privacy_policy" name="privacy_policy" required>
+                    <input type="checkbox" id="privacy_policy" name="policy" required>
                     <label class="required-field" for="privacy_policy">He leído y acepto la política de privacidad y autorizo el tratamiento de mis datos personales conforme a lo establecido en la Ley de Protección de Datos.</label>
                 </div>
-                
+                <!-- Opcional: asunto y destino visibles en el correo -->
+                    <input type="hidden" name="_subject" value="Mensaje de Libro de Reclamaciones de Cliente desde tu Pagina Web!!!">
+                    <input type="hidden" name="_replyto">
+
                 <button type="submit">Enviar Reclamación</button>
+                <p id="formMsg" style="margin-top:10px; text-align: center;"></p>
             </form>
         </div>
         
+         <!-- Scrip para enviar correo a Mama -->
+        <script>
+                const form = document.getElementById('contactForm');
+                const msg  = document.getElementById('formMsg');
+
+                form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+            try {
+                const res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (res.ok) {
+            form.reset();
+            msg.textContent = '¡Gracias! Tu mensaje fue enviado con éxito :)';
+            msg.style.color = '#2e7d32';
+            } else {
+            const data = await res.json().catch(()=> ({}));
+            msg.textContent = data?.errors?.[0]?.message || 'Ocurrió un error al enviar. Intenta nuevamente.';
+            msg.style.color = '#c62828';
+            }
+            } catch (err) {
+                msg.textContent = 'No hay conexión. Intenta nuevamente.';
+                msg.style.color = '#c62828';
+            }
+            });
+
+            const fd = new FormData(form);
+            fd.set('_replyto', form.elements.email.value); // usa el correo que escribe el usuario
+            </script>
+
+
         <div class="card">
             <h2>Proceso de Gestión de Reclamaciones</h2>
             <p>Nos comprometemos a dar respuesta a todas las reclamaciones en un plazo máximo de 15 días hábiles.</p>
