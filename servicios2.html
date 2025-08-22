@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Centro Psicológico Mente Sana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-teal-50 {
+            background-color: #f0fdfa;
+        }
+        .text-teal-600 {
+            color: #0d9488;
+        }
+        .border-teal-200 {
+            border-color: #99f6e4;
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header y navegación -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-teal-600 title-font">Mente Sana</div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html" class="text-gray-700 hover:text-teal-600 transition">Inicio</a></li>
+                        <li><a href="sobre-nosotras.html" class="text-gray-700 hover:text-teal-600 transition">Sobre nosotras</a></li>
+                        <li><a href="servicios.html" class="text-teal-600 font-semibold transition">Servicios</a></li>
+                        <li><a href="faq.html" class="text-gray-700 hover:text-teal-600 transition">Preguntas frecuentes</a></li>
+                        <li><a href="index.html#contacto" class="text-gray-700 hover:text-teal-600 transition">Contacto</a></li>
+                        <li><a href="reclamaciones.html" class="text-red-600 hover:text-red-700 transition">Libro de reclamaciones</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden text-teal-600" id="mobileMenuBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-r from-teal-50 to-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6 title-font">Nuestros Servicios</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Ofrecemos una amplia gama de servicios psicológicos adaptados a tus necesidades específicas</p>
+        </div>
+    </section>
+
+    <!-- Servicios Grid -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Terapia Individual -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-teal-600 p-6">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Terapia Individual</h3>
+                        <p class="text-teal-100">Atención personalizada para tu bienestar emocional</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f865bd05-7edc-427e-bd26-c4fcb0a0b325.png" alt="Dra. Laura Méndez" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <p class="text-sm font-semibold text-gray-800">Dra. Laura Méndez</p>
+                                <p class="text-xs text-gray-600">Especialista en TCC</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Sesiones de 60 minutos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Enfoque cognitivo-conductual</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Personalizado a tus necesidades</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-teal-600">80€</span>
+                            <a href="index.html#contacto" class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">
+                                Reservar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terapia de Pareja -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-teal-600 p-6">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Terapia de Pareja</h3>
+                        <p class="text-teal-100">Mejora la comunicación y fortalece tu relación</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/883a2594-b8c2-4f6a-b683-1b0b66718d4a.png" alt="Dra. Elena Vargas" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <p class="text-sm font-semibold text-gray-800">Dra. Elena Vargas</p>
+                                <p class="text-xs text-gray-600">Especialista en terapia sistémica</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Sesiones de 90 minutos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Enfoque sistémico y comunicacional</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Resolución de conflictos</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-teal-600">120€</span>
+                            <a href="index.html#contacto" class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">
+                                Reservar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terapia Online -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-teal-600 p-6">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Terapia Online</h3>
+                        <p class="text-teal-100">Terapia profesional desde la comodidad de tu casa</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="flex -space-x-2">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f865bd05-7edc-427e-bd26-c4fcb0a0b325.png" alt="Dra. Laura Méndez" class="w-10 h-10 rounded-full border-2 border-white">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/883a2594-b8c2-4f6a-b683-1b0b66718d4a.png" alt="Dra. Elena Vargas" class="w-10 h-10 rounded-full border-2 border-white">
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-semibold text-gray-800">Ambas profesionales</p>
+                                <p class="text-xs text-gray-600">Disponibilidad flexible</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Videollamada segura</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Misma calidad que presencial</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Flexibilidad horaria</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-teal-600">70€</span>
+                            <a href="index.html#contacto" class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">
+                                Reservar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terapia Familiar -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-teal-600 p-6">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Terapia Familiar</h3>
+                        <p class="text-teal-100">Mejora la dinámica y comunicación familiar</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/883a2594-b8c2-4f6a-b683-1b0b66718d4a.png" alt="Dra. Elena Vargas" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <p class="text-sm font-semibold text-gray-800">Dra. Elena Vargas</p>
+                                <p class="text-xs text-gray-600">Especialista en terapia familiar</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Sesiones de 90 minutos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Enfoque sistémico</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Resolución de conflictos familiares</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-teal-600">130€</span>
+                            <a href="index.html#contacto" class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">
+                                Reservar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Talleres Grupales -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-teal-600 p-6">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Talleres Grupales</h3>
+                        <p class="text-teal-100">Aprende y crece en comunidad</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="flex -space-x-2">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f865bd05-7edc-427e-bd26-c4fcb0a0b325.png" alt="Dra. Laura Méndez" class="w-10 h-10 rounded-full border-2 border-white">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/883a2594-b8c2-4f6a-b683-1b0b66718d4a.png" alt="Dra. Elena Vargas" class="w-10 h-10 rounded-full border-2 border-white">
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-semibold text-gray-800">Ambas profesionales</p>
+                                <p class="text-xs text-gray-600">Grupos reducidos</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Sesiones de 120 minutos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Máximo 8 participantes</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Temáticas variadas</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-teal-600">40€/persona</span>
+                            <a href="index.html#contacto" class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">
+                                Información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Talleres de Empresa -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-teal-600 p-6">
+                        <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Talleres de Empresa</h3>
+                        <p class="text-teal-100">Bienestar emocional en el ámbito laboral</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="flex -space-x-2">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f865bd05-7edc-427e-bd26-c4fcb0a0b325.png" alt="Dra. Laura Méndez" class="w-10 h-10 rounded-full border-2 border-white">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/883a2594-b8c2-4f6a-b683-1b0b66718d4a.png" alt="Dra. Elena Vargas" class="w-10 h-10 rounded-full border-2 border-white">
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-semibold text-gray-800">Ambas profesionales</p>
+                                <p class="text-xs text-gray-600">Adaptado a empresas</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Personalizado por empresa</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Manejo del estrés laboral</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-sm text-gray-600">Comunicación efectiva</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-teal-600">Consultar</span>
+                            <a href="index.html#contacto" class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-md text-sm transition duration-300">
+                                Cotizar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información Adicional -->
+    <section class="py-20 bg-teal-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 title-font">¿Necesitas ayuda para elegir?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos aquí para orientarte y recomendarte el servicio que mejor se adapte a tus necesidades</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-teal-600 mb-4">Primera Consulta Gratuita</h3>
+                    <p class="text-gray-600 mb-4">15 minutos de consulta sin compromiso para evaluar tu caso y recomendarte el mejor abordaje.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Sin compromiso
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Evaluación profesional
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Plan personalizado
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-teal-600 mb-4">Bonos y Descuentos</h3

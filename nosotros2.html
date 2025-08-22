@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotras - Centro Psicológico Mente Sana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-teal-50 {
+            background-color: #f0fdfa;
+        }
+        .text-teal-600 {
+            color: #0d9488;
+        }
+        .border-teal-200 {
+            border-color: #99f6e4;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header y navegación -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-teal-600 title-font">Mente Sana</div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html" class="text-gray-700 hover:text-teal-600 transition">Inicio</a></li>
+                        <li><a href="sobre-nosotras.html" class="text-teal-600 font-semibold transition">Sobre nosotras</a></li>
+                        <li><a href="index.html#servicios" class="text-gray-700 hover:text-teal-600 transition">Servicios</a></li>
+                        <li><a href="faq.html" class="text-gray-700 hover:text-teal-600 transition">Preguntas frecuentes</a></li>
+                        <li><a href="index.html#contacto" class="text-gray-700 hover:text-teal-600 transition">Contacto</a></li>
+                        <li><a href="reclamaciones.html" class="text-red-600 hover:text-red-700 transition">Libro de reclamaciones</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden text-teal-600" id="mobileMenuBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-r from-teal-50 to-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6 title-font">Conoce a Nuestro Equipo</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Dos psicólogas especializadas trabajando juntas para ofrecerte la mejor atención psicológica integral.</p>
+        </div>
+    </section>
+
+    <!-- Dra. Laura Méndez -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Foto -->
+                <div class="lg:w-2/5">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f865bd05-7edc-427e-bd26-c4fcb0a0b325.png" alt="Retrato profesional de la Dra. Laura Méndez, psicóloga especialista en terapia cognitivo-conductual" class="w-full rounded-lg shadow-lg">
+                </div>
+
+                <!-- Información -->
+                <div class="lg:w-3/5">
+                    <div class="mb-8">
+                        <h2 class="text-3xl font-bold text-teal-600 mb-2 title-font">Dra. Laura Méndez</h2>
+                        <p class="text-gray-600 text-lg mb-4">Psicóloga Clínica - Especialista en Terapia Cognitivo-Conductual</p>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">📋 Colegiada</h3>
+                                <p class="text-gray-600">Nº M-12345</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">⏳ Experiencia</h3>
+                                <p class="text-gray-600">12+ años</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">🎓 Formación</h3>
+                                <p class="text-gray-600">Univ. Autónoma de Madrid</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">🌐 Idiomas</h3>
+                                <p class="text-gray-600">Español, Inglés</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Especialidades -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 title-font">Especialidades</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Ansiedad y Estrés</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Depresión</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">TOC</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Autoestima</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Mindfulness</span>
+                        </div>
+                    </div>
+
+                    <!-- Enfoque -->
+                    <div class="bg-teal-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 title-font">Mi Enfoque</h3>
+                        <p class="text-gray-700">"Integro terapia cognitivo-conductual con mindfulness para ofrecer un tratamiento basado en evidencia científica. Mi objetivo es ayudarte a desarrollar herramientas prácticas para manejar tus emociones y mejorar tu calidad de vida."</p>
+                    </div>
+
+                    <a href="index.html#contacto" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md transition duration-300 inline-block mt-6">
+                        Pedir cita con Laura
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Separador -->
+    <div class="bg-teal-600 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4 title-font">Trabajo en Equipo</h2>
+            <p class="text-teal-100 max-w-2xl mx-auto">Combinamos especialidades complementarias para un abordaje integral</p>
+        </div>
+    </div>
+
+    <!-- Dra. Elena Vargas -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Información -->
+                <div class="lg:w-3/5 order-2 lg:order-1">
+                    <div class="mb-8">
+                        <h2 class="text-3xl font-bold text-teal-600 mb-2 title-font">Dra. Elena Vargas</h2>
+                        <p class="text-gray-600 text-lg mb-4">Psicóloga - Especialista en Terapia Familiar Sistémica</p>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">📋 Colegiada</h3>
+                                <p class="text-gray-600">Nº M-67890</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">⏳ Experiencia</h3>
+                                <p class="text-gray-600">10+ años</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">🎓 Formación</h3>
+                                <p class="text-gray-600">Univ. Complutense Madrid</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">🌐 Idiomas</h3>
+                                <p class="text-gray-600">Español, Francés</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Especialidades -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 title-font">Especialidades</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Terapia de Pareja</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Terapia Familiar</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Relaciones</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Apego</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Comunicación</span>
+                        </div>
+                    </div>
+
+                    <!-- Enfoque -->
+                    <div class="bg-teal-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 title-font">Mi Enfoque</h3>
+                        <p class="text-gray-700">"Me especializo en terapia familiar y de pareja, trabajando desde un enfoque sistémico. Ayudo a mejorar la comunicación, resolver conflictos y fortalecer los vínculos afectivos en las relaciones significativas."</p>
+                    </div>
+
+                    <a href="index.html#contacto" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md transition duration-300 inline-block mt-6">
+                        Pedir cita con Elena
+                    </a>
+                </div>
+
+                <!-- Foto -->
+                <div class="lg:w-2/5 order-1 lg:order-2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/883a2594-b8c2-4f6a-b683-1b0b66718d4a.png" alt="Retrato profesional de la Dra. Elena Vargas, psicóloga especialista en terapia familiar y sistémica" class="w-full rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestro Enfoque Conjunto -->
+    <section class="py-20 bg-teal-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 title-font">Nuestro Enfoque Conjunto</h2>
+                <div class="w-20 h-1 bg-teal-600 mx-auto mb-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-white p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Enfoque Integral</h3>
+                    <p class="text-gray-600">Combinamos terapia individual y sistémica para un abordaje completo de tus necesidades.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-white p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Confidencialidad</h3>
+                    <p class="text-gray-600">Tu privacidad es nuestra prioridad. Trabajamos con estrictos protocolos de confidencialidad.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-white p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Flexibilidad</h3>
+                    <p class="text-gray-600">Ofrecemos terapia presencial y online para adaptarnos a tus necesidades y horarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="text-2xl font-bold text-white mb-4 title-font">Mente Sana</div>
+                    <p class="text-gray-300 max-w-xs">Centro psicológico especializado en terapia individual, de pareja y familiar.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Enlaces</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-300 hover:text-white transition">Inicio</a></li>
+                            <li><a href="sobre-nosotras.html" class="text-gray-300 hover:text-white transition">Sobre nosotras</a></li>
+                            <li><a href="index.html#servicios" class="text-gray-300 hover:text-white transition">Servicios</a></li>
+                            <li><a href="faq.html" class="text-gray-300 hover:text-white transition">Preguntas frecuentes</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                        <ul class="space-y-2">
+                            <li class="text-gray-300">Calle Psicología, 23, 1ºA</li>
+                            <li class="text-gray-300">28015 Madrid</li>
+                            <li class="text-gray-300">+34 912 345 678</li>
+                            <li class="text-gray-300">hola@mente-sana.com</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-300 hover:text-white transition">Aviso legal</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition">Política de privacidad</a></li>
+                            <li><a href="reclamaciones.html" class="text-gray-300 hover:text-white transition">Libro de reclamaciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2024 Centro Psicológico Mente Sana. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

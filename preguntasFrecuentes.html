@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Centro Psicológico Mente Sana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-teal-50 {
+            background-color: #f0fdfa;
+        }
+        .text-teal-600 {
+            color: #0d9488;
+        }
+        .border-teal-200 {
+            border-color: #99f6e4;
+        }
+        .accordion-item {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .accordion-header {
+            cursor: pointer;
+            padding: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+        .accordion-header:hover {
+            color: #0d9488;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-icon.rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header y navegación -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-teal-600 title-font">Mente Sana</div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html" class="text-gray-700 hover:text-teal-600 transition">Inicio</a></li>
+                        <li><a href="index.html#sobre-nosotras" class="text-gray-700 hover:text-teal-600 transition">Sobre nosotras</a></li>
+                        <li><a href="index.html#servicios" class="text-gray-700 hover:text-teal-600 transition">Servicios</a></li>
+                        <li><a href="faq.html" class="text-teal-600 font-semibold transition">Preguntas frecuentes</a></li>
+                        <li><a href="index.html#contacto" class="text-gray-700 hover:text-teal-600 transition">Contacto</a></li>
+                        <li><a href="reclamaciones.html" class="text-red-600 hover:text-red-700 transition">Libro de reclamaciones</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden text-teal-600" id="mobileMenuBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-r from-teal-50 to-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6 title-font">Preguntas Frecuentes</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Encuentra respuestas a las dudas más comunes sobre nuestros servicios de psicología</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <!-- Categoría: Primera consulta -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-teal-600 mb-8 title-font">Primera consulta y proceso</h2>
+                    <div class="accordion-item">
+                        <div class="accordion-header flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">¿Cómo es la primera sesión de terapia?</h3>
+                            <svg class="accordion-icon w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-6 text-gray-600">
+                                <p class="mb-4">La primera sesión es principalmente de evaluación y conocimiento mutuo. Durante aproximadamente 60 minutos:</p>
+                                <ul class="list-disc list-inside space-y-2 mb-4">
+                                    <li>Conoceremos tu historia personal y el motivo de consulta</li>
+                                    <li>Estableceremos los objetivos terapéuticos</li>
+                                    <li>Explicaremos nuestro método de trabajo</li>
+                                    <li>Resolveremos todas tus dudas sobre el proceso</li>
+                                    <li>Planificaremos las siguientes sesiones si decides continuar</li>
+                                </ul>
+                                <p>Es un espacio seguro donde puedes expresarte libremente sin juicios.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">¿Cuánto tiempo dura una terapia?</h3>
+                            <svg class="accordion-icon w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-6 text-gray-600">
+                                <p class="mb-4">La duración de la terapia varía según cada caso, pero generalmente:</p>
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li><strong>Problemas específicos:</strong> 8-12 sesiones (3-4 meses)</li>
+                                    <li><strong>Problemas más complejos:</strong> 6-12 meses</li>
+                                    <li><strong>Terapia de mantenimiento:</strong> Sesiones espaciadas según necesidad</li>
+                                </ul>
+                                <p class="mt-4">Evaluamos el progreso regularmente y ajustamos la frecuencia según tus necesidades.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">¿Con qué frecuencia son las sesiones?</h3>
+                            <svg class="accordion-icon w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-6 text-gray-600">
+                                <p class="mb-4">La frecuencia depende de tus necesidades específicas:</p>
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li><strong>Fase inicial:</strong> Semanal o quincenal</li>
+                                    <li><strong>Fase de consolidación:</strong> Quincenal o mensual</li>
+                                    <li><strong>Seguimiento:</strong> Trimestral o según necesidad</li>
+                                </ul>
+                                <p class="mt-4">Juntos decidiremos la frecuencia que mejor se adapte a tu proceso y disponibilidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría: Métodos de pago y precios -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-teal-600 mb-8 title-font">Métodos de pago y precios</h2>
+                    <div class="accordion-item">
+                        <div class="accordion-header flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">¿Qué métodos de pago aceptan?</h3>
+                            <svg class="accordion-icon w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-6 text-gray-600">
+                                <p class="mb-4">Aceptamos diversos métodos de pago para tu comodidad:</p>
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li>Transferencia bancaria</li>
+                                    <li>Bizum</li>
+                                    <li>Tarjeta de crédito/débito</li>
+                                    <li>Efectivo (solo en consulta presencial)</li>
+                                    <li>PayPal (para terapia online)</li>
+                                </ul>
+                                <p class="mt-4">El pago se realiza al finalizar cada sesión.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">¿Ofrecen descuentos o bonos?</h3>
+                            <svg class="accordion-icon w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-6 text-gray-600">
+                                <p class="mb-4">Sí, ofrecemos varias opciones para hacer la terapia más accesible:</p>
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li><strong>Bono 5 sesiones:</strong> 10% de descuento</li>
+                                    <li><strong>Bono 10 sesiones:</strong> 15% de descuento</li>
+                                    <li><strong>Estudiantes y desempleados:</strong> 15% de descuento (presentando acreditación)</li>
+                                    <li><strong>Terapia online:</strong> Precios especiales</li>
+                                </ul>
+                                <p class="mt-4">Consulta disponibilidad y condiciones específicas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">¿El seguro médico cubre las sesiones?</h3>
+                            <svg class="accordion-icon w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-6 text-gray-600">
+                                <p class="mb-4">Depende de tu póliza de seguro. Generalmente:</p>
+                                <ul class="list-disc list-inside space-y-2 mb-4">
+                                    <li>Algunos seguros privados cubren parcialmente la psicología</li>
+                                    <li>La Seguridad Social tiene cobertura limitada y listas de espera largas</li>
+                                    <li>Te podemos facilitar factura para que solicites el reembolso a tu aseguradora</li>
+                                </ul>
+                                <p>Te recomendamos consultar directamente con tu compañía de seguros.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría: Confidencialidad y ética -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-teal-600 mb-8 title-font">Confidencialidad y ética</h2>
+                    <div class="accordion-item">
+                        <div class="accordion-header flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">¿Es confidencial todo lo que hablamos?</h3>
+                            <svg class="accordion-icon w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-6 text-gray-600">
+                                <p class="mb-4">Sí, el secreto profesional es absoluto. Existen solo 3 excepciones legales:</p>
+                                <ul class="list-disc list-inside space-y-2 mb-4">
+                                    <li>Riesgo grave para tu vida o la de otros</li>
+                                    <li>Abuso o maltrato a menores</li>
+                                    <li>Orden judicial expresa</li>
+                                </ul>
+                                <p>Tus datos están protegidos según la Ley de Protección de Datos y nuestro código deontológico.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">¿Qué formación y acreditaciones tienen?</h3>
+                            <svg class="accordion-icon w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-6 text-gray-600">
+                                <p class="mb-4">Ambas somos psicólogas colegiadas con formación específica:</p>
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li><strong>Dra. Laura Méndez:</strong> Colegiada M-12345, especialista en terapia cognitivo-conductual</li>
+                                    <li><strong>Dra. Elena Vargas:</strong> Colegiada M-67890, especialista en terapia familiar y sistémica</li>
+                                    <li>Formación continuada en las últimas técnicas terapéuticas</li>
+                                    <li>Supervisión regular de casos</li>
+                                    <li>Participación en congresos y formación permanente</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría: Modalidades de terapia -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-teal-600 mb-8 title-font">Modalidades de terapia</h2>
+                    <div class="accordion-item">
+                        <div class="accordion-header flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">¿Qué diferencia hay entre terapia online y presencial?</h3>
+                            <svg class="accordion-icon w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-6 text-gray-600">
+                                <p class="mb-4">Ambas modalidades son efectivas, con algunas diferencias:</p>
+                                <div class="grid md:grid-cols-2 gap-6 mb-4">
+                                    <div>
+                                        <h4 class="font-semibold text-teal-600 mb-2">Terapia online</h4>
+                                        <ul class="list-disc list-inside space-y-1 text-sm">
+                                            <li>Mayor flexibilidad horaria</li>
+                                            <li>Sin desplazamientos</li>
+                                            <li>Comodidad desde tu casa</li>
+                                            <li>Misma efectividad demostrada</li>
+                                            <li>Plataforma segura y confidencial</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-teal-600 mb-2">Terapia presencial</h4>
+                                        <ul class="list-disc list-inside space-y-1 text-sm">
+                                            <li>Contacto cara a cara</li>
+                                            <li>Espacio terapéutico dedicado</li>
+                                            <li>Sin dependencia tecnológica</li>
+                                            <li>Ideal para ciertas técnicas</li>
+                                            <li>Ambiente controlado</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p>Te ayudaremos a elegir la modalidad que mejor se adapte a tus necesidades.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header flex justify-between items-center" onclick="toggleAccordion(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">¿Atienden urgencias psicológicas?</h3>
+                            <svg class="accordion-icon w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-6 text-gray-600">
+                                <p class="mb-4">Para urgencias psicológicas:</p>
+                                <ul class="list-disc list-inside space-y-2 mb-4">
+                                    <li><strong>Ofrecemos citas prioritarias</strong> dentro de las 24-48 horas</li>
+                                    <li>Disponibilidad telefónica para crisis</li>
+                                    <li>Coordinación con otros profesionales si es necesario</li>
+                                </ul>
+                                <p class="font-semibold text-red-600">En caso de emergencia vital, contacta inmediatamente con el 112 o acude al servicio de urgencias más cercano.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contacto adicional -->
+                <div class="bg-teal-50 p-8 rounded-lg text-center mt-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 title-font">¿No encontraste tu respuesta?</h2>
+                    <p class="text-gray-600 mb-6">Estamos aquí para ayudarte. Contáctanos y resolveremos todas tus dudas personalmente.</p>
+                    <a href="index.html#contacto" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md transition duration-300 inline-block">
+                        Contactar ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="text-2xl font-bold text-white mb-4 title-font">Mente Sana</div>
+                    <p class="text-gray-300 max-w-xs">Centro psicológico especializado en terapia individual, de pareja y familiar.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Enlaces</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-300 hover:text-white transition">Inicio</a></li>
+                            <li><a href="index.html#sobre-nosotras" class="text-gray-300 hover:text-white transition">Sobre nosotras</a></li>
+                            <li><a href="index.html#servicios" class="text-gray-300 hover:text-white transition">Servicios</a></li>
+                            <li><a href="faq.html" class="text-gray-300 hover:text-white transition">Preguntas frecuentes</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                        <ul class="space-y-2">
+                            <li class="text-gray-300">Calle Psicología, 23, 1ºA</li>
+                            <li class="text-gray-300">28015 Madrid</li>
+                            <li class="text-gray-300">+34 912 345 678</li>
+                            <li class="text-gray-300">hola@mente-sana.com</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-300 hover:text-white transition">Aviso legal</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition">Política de privacidad</a></li>
+                            <li><a href="reclamaciones.html" class="text-gray-300 hover:text-white transition">Libro de reclamaciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2024 Centro Psicológico Mente Sana. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.accordion-icon');
+            
+            // Toggle active class
+            content.classList.toggle('active');
+            icon.classList.toggle('rotate');
+            
+            // Close other accordions if needed
+            const allContents = document.querySelectorAll('.accordion-content');
+            const allIcons = document.querySelectorAll('.accordion-icon');
+            
+            allContents.forEach((item, index) => {
+                if (item !== content &&

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotras - Centro Psicológico Mente Sana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-teal-50 {
+            background-color: #f0fdfa;
+        }
+        .text-teal-600 {
+            color: #0d9488;
+        }
+        .border-teal-200 {
+            border-color: #99f6e4;
+        }
+        .team-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .specialty-badge {
+            background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header y navegación -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-teal-600 title-font">Mente Sana</div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html" class="text-gray-700 hover:text-teal-600 transition">Inicio</a></li>
+                        <li><a href="sobre-nosotras.html" class="text-teal-600 font-semibold transition">Sobre nosotras</a></li>
+                        <li><a href="index.html#servicios" class="text-gray-700 hover:text-teal-600 transition">Servicios</a></li>
+                        <li><a href="faq.html" class="text-gray-700 hover:text-teal-600 transition">Preguntas frecuentes</a></li>
+                        <li><a href="index.html#contacto" class="text-gray-700 hover:text-teal-600 transition">Contacto</a></li>
+                        <li><a href="reclamaciones.html" class="text-red-600 hover:text-red-700 transition">Libro de reclamaciones</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden text-teal-600" id="mobileMenuBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-r from-teal-50 to-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6 title-font">Conoce a Nuestro Equipo</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Dos psicólogas comprometidas con tu bienestar emocional, uniendo experiencia y enfoques complementarios para ofrecerte la mejor atención psicológica</p>
+        </div>
+    </section>
+
+    <!-- Nuestra Filosofía -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 title-font">Nuestra Filosofía de Trabajo</h2>
+                <div class="w-20 h-1 bg-teal-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="text-center p-6">
+                    <div class="bg-teal-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Enfoque Integrador</h3>
+                    <p class="text-gray-600">Combinamos las mejores técnicas de diferentes enfoques terapéuticos para adaptarnos a tus necesidades específicas.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-teal-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Confidencialidad Total</h3>
+                    <p class="text-gray-600">Tu privacidad es nuestra prioridad. Creamos un espacio seguro donde puedes expresarte libremente.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-teal-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Resultados Tangibles</h3>
+                    <p class="text-gray-600">Trabajamos con objetivos claros y herramientas prácticas que puedes aplicar en tu vida diaria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo - Dra. Laura Méndez -->
+    <section class="py-20 bg-teal-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="team-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f865bd05-7edc-427e-bd26-c4fcb0a0b325.png" alt="Dra. Laura Méndez - Psicóloga especialista en terapia cognitivo-conductual con expresión profesional y cercana" class="w-full h-64 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <div class="flex items-center mb-4">
+                                <h2 class="text-2xl font-bold text-teal-600 title-font">Dra. Laura Méndez</h2>
+                                <span class="ml-4 px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">Colegiada M-12345</span>
+                            </div>
+                            <p class="text-gray-600 mb-6">Especialista en terapia cognitivo-conductual con más de 12 años de experiencia ayudando a personas a superar la ansiedad, depresión y trastornos del estado de ánimo.</p>
+                            
+                            <div class="mb-6">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Formación Académica</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-600 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span>Licenciatura en Psicología - Universidad Autónoma de Madrid</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-600 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span>Máster en Terapia Cognitivo-Conductual - Universidad de Barcelona</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-600 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span>Especialización en Trastornos de Ansiedad - Instituto Español de Psicología</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Especialidades</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="specialty-badge text-white px-3 py-1 rounded-full text-sm">Ansiedad</span>
+                                    <span class="specialty-badge text-white px-3 py-1 rounded-full text-sm">Depresión</span>
+                                    <span class="specialty-badge text-white px-3 py-1 rounded-full text-sm">Estrés</span>
+                                    <span class="specialty-badge text-white px-3 py-1 rounded-full text-sm">TOC</span>
+                                    <span class="specialty-badge text-white px-3 py-1 rounded-full text-sm">Fobias</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Enfoque Terapéutico</h3>
+                                <p class="text-gray-600">"Mi trabajo se centra en ayudarte a identificar y modificar los patrones de pensamiento y comportamiento que te limitan. Utilizo técnicas basadas en evidencia científica que te proporcionarán herramientas prácticas para manejar tus emociones y mejorar tu calidad de vida."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo - Dra. Elena Vargas -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="team-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-2/3 p-8 order-2">
+                            <div class="flex items-center mb-4">
+                                <h2 class="text-2xl font-bold text-teal-600 title-font">Dra. Elena Vargas</h2>
+                                <span class="ml-4 px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">Colegiada M-67890</span>
+                            </div>
+                            <p class="text-gray-600 mb-6">Especialista en terapia familiar y sistémica con 10 años de experiencia. Mi enfoque se centra en mejorar las relaciones interpersonales y fortalecer los vínculos afectivos.</p>
+                            
+                            <div class="mb-6">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Formación Académica</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-600 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span>Licenciatura en Psicología - Universidad Complutense de Madrid</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-600 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span>Máster en Terapia Familiar Sistémica - Universidad de Valencia</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-600 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span>Postgrado en Mediación Familiar - Instituto de Terapia Familiar</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Especialidades</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="specialty-badge text-white px-3 py-1 rounded-full text-sm">Terapia de pareja</span>
+                                    <span class="specialty-badge text-white px-3 py-1 rounded-full text-sm">Terapia familiar</span>
+                                    <span class="specialty-badge text-white px-3 py-1 rounded-full text-sm">Conflictos relacionales</span>
+                                    <span class="specialty-badge text-white px-3 py-1 rounded-full text-sm">Comunicación</span>
+                                    <span class="specialty-badge text-white px-3 py-1 rounded-full text-sm">Crianza</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Enfoque Terapéutico</h3>
+                                <p class="text-gray-600">"Creo que las relaciones son el corazón de nuestro bienestar emocional. Mi trabajo consiste en ayudarte a mejorar la comunicación, resolver conflictos y construir relaciones más saludables y satisfactorias. Cada sistema familiar es único y merece un abordaje personalizado."</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/3 order-1">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/883a2594-b8c2-4f6a-b683-1b0b66718d4a.png" alt="Dra. Elena Vargas - Psicóloga especialista en terapia familiar y de pareja con expresión cálida y profesional" class="w-full h-64 md:h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestro Consultorio -->
+    <section class="py-20 bg-teal-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 title-font">Nuestro Consultorio</h2>
+                <div class="w-20 h-1 bg-teal-600 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Un espacio diseñado para tu comodidad y bienestar, donde podrás sentirte seguro y tranquilo durante tu proceso terapéutico.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5d965876-f6b5-4154-8062-8a5f8271900f.png" alt="Consultorio principal con sillones cómodos, luz natural y ambiente acogedor para sesiones de terapia" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Sala Principal</h3>
+                        <p class="text-gray-600 text-sm">Espacio amplio y luminoso diseñado para crear un ambiente de confianza y calma.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8a4bce99-8f93-47d7-9284-9fe545502956.png" alt="Zona de espera con revistas, plantas y decoración relajante para pacientes" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Zona de Espera</h3>
+                        <p class="text-gray-600 text-sm">Área cómoda con revistas especializadas y ambiente relajante antes de tu sesión.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/63b5041b-e0c0-4056-83b2-825823825ec4.png" alt="Sala de terapia familiar con disposición circular para facilitar la comunicación entre todos los miembros" class="w
